@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://git.oteao.com/huxiugang/config-repo.git
+          username: huxiugang@zuipin.cn
+          password: 15759192931a
+#          basedir: D:\hxg\gongsi\hxg-spring-cloud\config\src\main\resources\basedir
+          search-paths: '{application}'
+          force-pull: true
+management:
+  endpoints:
+    web:
+      expose: "*"
+  security:
+    enabled: false

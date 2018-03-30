@@ -1,0 +1,30 @@
+server:
+  port: 9001
+  context-path: /${spring.application.name}
+spring:
+  application:
+    name: simple-demo
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
+  datasource:
+    schema:
+      - classpath:database/data.sql
+      - classpath:database/user.sql
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+    status-page-url-path: /health
+management:
+  security:
+    enabled: false
