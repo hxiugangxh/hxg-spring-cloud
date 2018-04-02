@@ -3,18 +3,14 @@ server:
   context-path: /${spring.application.name}
 spring:
   application:
-    name: simple-demo
-  cloud:
-    config:
-      discovery:
-        enabled: true
-        service-id: CONFIG
-      profile: dev
-  datasource:
-    schema:
-      - classpath:database/data.sql
-      - classpath:database/user.sql
-
+    name: demo
+#  配置中心
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true
+#        service-id: CONFIG
+#      profile: dev
 eureka:
   client:
     service-url:
@@ -25,10 +21,11 @@ eureka:
     leaseExpirationDurationInSeconds: 2
     instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${spring.application.instance_id:${server.port}}
     status-page-url-path: /health
+#关掉验证
 management:
   security:
     enabled: false
-
-boy:
-  name: tom
-  age: 18
+#feign fallback需要开启
+feign:
+  hystrix:
+    enabled: true
