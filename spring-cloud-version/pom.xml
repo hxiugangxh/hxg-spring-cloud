@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.hxg.cloud</groupId>
+    <groupId>com.zuipin.cloud</groupId>
     <artifactId>spring-cloud-version</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -34,16 +34,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <modules>
-        <module>../spring-cloud-core</module>
-        <module>../eureka</module>
-        <module>../config</module>
-        <module>../order</module>
-        <module>../product</module>
-        <module>../simple-demo</module>
-        <module>../demo</module>
-    </modules>
 
     <build>
         <plugins>

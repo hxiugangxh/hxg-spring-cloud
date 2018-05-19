@@ -7,7 +7,7 @@ spring:
         git:
           uri: https://github.com/hxiugangxh/config-repo.git
           username: huxiugangxh
-          password: 15759192931a
+          password: fafafa
 #          basedir: D:\hxg\gongsi\hxg-spring-cloud\config\src\main\resources\basedir
           search-paths: '{application}'
           force-pull: true

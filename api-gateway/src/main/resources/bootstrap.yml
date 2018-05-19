@@ -1,0 +1,31 @@
+server:
+  port: 9001
+  context-path: /${spring.application.name}
+spring:
+  application:
+    name: api-gateway
+#  配置中心
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true
+#        service-id: CONFIG
+#      profile: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+    status-page-url-path: /health
+#关掉验证
+management:
+  security:
+    enabled: false
+#feign fallback需要开启
+feign:
+  hystrix:
+    enabled: true

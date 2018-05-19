@@ -17,7 +17,7 @@
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>com.hxg.cloud</groupId>
+        <groupId>com.zuipin.cloud</groupId>
         <artifactId>spring-cloud-version</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
@@ -25,7 +25,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.hxg.cloud</groupId>
+            <groupId>com.zuipin.cloud</groupId>
             <artifactId>spring-cloud-core</artifactId>
             <version>${spring.cloud.version}</version>
         </dependency>
