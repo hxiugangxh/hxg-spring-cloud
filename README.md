@@ -26,7 +26,7 @@ Spring官网:http://spring.io/projects
 
 其次用自定义骨架，如
 <archetype>
-  <groupId>com.xxxx.cloud</groupId>
+  <groupId>com.hxg.cloud</groupId>
   <artifactId>app-archetype</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <description>Demo project for Spring Boot</description>

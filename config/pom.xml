@@ -11,7 +11,7 @@
 	<description>配置仓库</description>
 
 	<parent>
-		<groupId>com.zuipin.cloud</groupId>
+		<groupId>com.hxg.cloud</groupId>
 		<artifactId>spring-cloud-version</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->

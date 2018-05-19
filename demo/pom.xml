@@ -4,21 +4,21 @@
 
     <artifactId>demo</artifactId>
     <version>1.0.0-RELAESE</version>
-    <groupId>com.zuipin.demo</groupId>
+    <groupId>com.hxg.demo</groupId>
     <packaging>pom</packaging>
 
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>com.zuipin.cloud</groupId>
+        <groupId>com.hxg.cloud</groupId>
         <artifactId>spring-cloud-version</artifactId>
         <version>0.0.1-SNAPSHOT</version> <!-- lookup parent from repository -->
     </parent>
 
     <dependencies>
         <dependency>
-            <groupId>com.zuipin.cloud</groupId>
+            <groupId>com.hxg.cloud</groupId>
             <artifactId>spring-cloud-core</artifactId>
             <version>${spring.cloud.version}</version>
         </dependency>
