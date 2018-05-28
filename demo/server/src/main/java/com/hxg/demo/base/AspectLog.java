@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 public class AspectLog {
 
     public void myLog(String msg) {
-        log.info(msg);
+        //log.info(msg);
     }
 
     /**

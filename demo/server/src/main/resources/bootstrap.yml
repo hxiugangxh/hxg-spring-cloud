@@ -16,7 +16,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: false
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
     instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${spring.application.instance_id:${server.port}}
@@ -29,3 +29,10 @@ management:
 feign:
   hystrix:
     enabled: true
+
+#全局配置 修改熔断器默认时间
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
+
+hystrix.command:
+  default.execution.isolation.thread.timeoutInMilliseconds: 5000
+  timeOutStr2.execution.isolation.thread.timeoutInMilliseconds: 1000

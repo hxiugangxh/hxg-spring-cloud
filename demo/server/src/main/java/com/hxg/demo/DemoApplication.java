@@ -7,7 +7,6 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringCloudApplication
-@EnableCircuitBreaker
 @ComponentScan(basePackages = {
 		"com.hxg.demo",
 		"com.hxg.product.client"
