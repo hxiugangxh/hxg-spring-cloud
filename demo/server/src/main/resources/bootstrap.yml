@@ -16,11 +16,11 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
   instance:
-    prefer-ip-address: false
+    prefer-ip-address: true
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
     instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${spring.application.instance_id:${server.port}}
-    status-page-url-path: /health
+    status-page-url-path: http://localhost:${server.port}/${spring.application.name}/health
 #关掉验证
 management:
   security:
