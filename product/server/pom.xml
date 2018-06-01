@@ -12,6 +12,12 @@
     <artifactId>product-server</artifactId>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.hxg.cloud</groupId>
             <artifactId>product-client</artifactId>
