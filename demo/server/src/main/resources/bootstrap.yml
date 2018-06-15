@@ -1,5 +1,5 @@
 server:
-  port: 9002
+  port: 8081
   context-path: /${spring.application.name}
 spring:
   application:
@@ -20,7 +20,7 @@ eureka:
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
     instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${spring.application.instance_id:${server.port}}
-    status-page-url-path: http://localhost:${server.port}/${spring.application.name}/health
+    status-page-url-path: /health
 #关掉验证
 management:
   security:
