@@ -1,6 +1,7 @@
 package com.hxg.simpledemo.controller;
 
-import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hxg.simpledemo.aspect.result.ResultEnum;
 import com.hxg.simpledemo.aspect.exception.UserException;
 import com.hxg.simpledemo.bean.User;
@@ -30,6 +31,9 @@ public class JpaUserContorller {
     @Autowired
     private UserDao userDao;
 
+    @Autowired
+    private ObjectMapper objectMapper;
+
     @RequestMapping("/exceptionHandler")
     public String exceptionHandler() {
         throw new UserException(ResultEnum.TEST_EXCEPTION);
@@ -48,7 +52,7 @@ public class JpaUserContorller {
         return user;
     }
 
-    @RequestMapping("saveBatch")
+    @RequestMapping("/saveBatch")
     @ResponseBody
     public List<User> saveBatch() {
 
@@ -67,9 +71,9 @@ public class JpaUserContorller {
 
     @RequestMapping("/{id:\\d+}")
     @ResponseBody
-    public String user(@PathVariable("id") Integer id){
+    public String user(@PathVariable("id") Integer id) throws Exception {
 
-        String string = JSON.toJSONString(userDao.getOne(id));
+        String string = objectMapper.writeValueAsString(userDao.getOne(id));
 
         System.out.println(string);
 

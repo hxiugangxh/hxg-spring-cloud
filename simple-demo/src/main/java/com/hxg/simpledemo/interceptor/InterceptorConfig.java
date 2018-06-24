@@ -1,3 +1,4 @@
+/*
 package com.hxg.simpledemo.interceptor;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,3 +19,4 @@ public class InterceptorConfig extends WebMvcConfigurerAdapter {
         registry.addInterceptor(timeInterceptor);
     }
 }
+*/

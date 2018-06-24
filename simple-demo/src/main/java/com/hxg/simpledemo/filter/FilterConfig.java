@@ -1,3 +1,4 @@
+/*
 package com.hxg.simpledemo.filter;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -42,6 +43,5 @@ public class FilterConfig {
         return  registrationBean;
     }
 
-
-
 }
+*/

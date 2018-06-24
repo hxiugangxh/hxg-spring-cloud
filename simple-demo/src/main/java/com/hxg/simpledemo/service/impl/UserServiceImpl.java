@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
             userList.add(user);
         }
 
-        return userDao.save(userList);
+        return userDao.saveAll(userList);
     }
 
     @Override

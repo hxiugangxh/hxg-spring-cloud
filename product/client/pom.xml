@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.hxg.cloud</groupId>
-            <artifactId>order-common</artifactId>
+            <artifactId>demo-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>

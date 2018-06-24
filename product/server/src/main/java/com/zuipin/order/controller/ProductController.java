@@ -14,7 +14,7 @@ public class ProductController {
     public String timeOutStr() {
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(6000);
         } catch (Exception e) {
             e.printStackTrace();
         }
